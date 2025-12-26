@@ -18,17 +18,17 @@ spec:
           imagePullPolicy: {{ .Values.image.pullPolicy }}
 
           ports:
-            - containerPort: {{ .Values.service.targetPort }}
+            - containerPort: {{ .Values.service.port }}
 
+{{- if .Values.env }}
           env:
-            {{- range $key, $value := .Values.env }}
-            - name: {{ $key }}
-              value: "{{ $value }}"
-            {{- end }}
+{{- toYaml .Values.env | nindent 12 }}
+{{- end }}
 
+{{- if .Values.envFrom }}
           envFrom:
-            - secretRef:
-                name: {{ include "springboot.name" . }}-secrets
+{{- toYaml .Values.envFrom | nindent 12 }}
+{{- end }}
 
           resources:
-            {{- toYaml .Values.resources | nindent 12 }}
+{{- toYaml .Values.resources | nindent 12 }}
