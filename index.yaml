@@ -3,7 +3,17 @@ entries:
   spring-boot-app:
   - apiVersion: v2
     appVersion: 1.0.1
-    created: "2025-12-26T22:14:32.363415+03:00"
+    created: "2025-12-26T22:15:22.765367+03:00"
+    description: Generic Spring Boot application chart
+    digest: 9a28221750ef880151e9b5d4fa66b7bd8cdd633541a2a915ee9a9a1189c10775
+    name: spring-boot-app
+    type: application
+    urls:
+    - spring-boot-app-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v2
+    appVersion: 1.0.1
+    created: "2025-12-26T22:15:22.76523+03:00"
     description: Generic Spring Boot application chart
     digest: 89dc6f55991b9cf9dee92978483003f4181ab7b195b6c349dfa3aed7b50daef2
     name: spring-boot-app
@@ -11,4 +21,4 @@ entries:
     urls:
     - spring-boot-app-0.1.0.tgz
     version: 0.1.0
-generated: "2025-12-26T22:14:32.36287+03:00"
+generated: "2025-12-26T22:15:22.764512+03:00"
