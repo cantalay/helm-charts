@@ -22,11 +22,3 @@ resources:
   limits:
     cpu: 500m
     memory: 256Mi
-
-ingress:
-  enabled: false
-  entryPoints: []
-  hosts: []
-  tls:
-    enabled: false
-    secretName: ""
