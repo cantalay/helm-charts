@@ -1,0 +1,32 @@
+replicaCount: 1
+
+image:
+  repository: ""
+  tag: ""
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 80
+
+env: {}
+# example:
+# env:
+#   NODE_ENV: production
+#   EXPO_PUBLIC_API_URL: https://api.example.com
+
+resources:
+  requests:
+    cpu: 100m
+    memory: 128Mi
+  limits:
+    cpu: 500m
+    memory: 256Mi
+
+ingress:
+  enabled: false
+  entryPoints: []
+  hosts: []
+  tls:
+    enabled: false
+    secretName: ""

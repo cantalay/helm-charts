@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "expo-app.fullname" . }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: {{ include "expo-app.name" . }}
+  template:
+    metadata:
+      labels:
+        app: {{ include "expo-app.name" . }}
+    spec:
+      containers:
+        - name: expo-app
+          image: "{{ required "image.repository is required" .Values.image.repository }}:{{ required "image.tag is required" .Values.image.tag }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          ports:
+            - containerPort: 80
+  {{- if .Values.env }}
+envFrom:
+  - configMapRef:
+      name: {{ include "expo-app.fullname" . }}-config
+  {{- end }}
+resources:
+  {{- toYaml .Values.resources | nindent 12 }}

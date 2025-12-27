@@ -1,0 +1,25 @@
+{{- if .Values.ingress.enabled }}
+  {{- if not .Values.ingress.hosts }}
+  {{- fail "ingress.enabled=true but ingress.hosts is empty" }}
+  {{- end }}
+
+apiVersion: traefik.io/v1alpha1
+kind: IngressRoute
+metadata:
+  name: {{ include "expo-app.fullname" . }}
+spec:
+  entryPoints:
+  {{- range .Values.ingress.entryPoints }}
+- {{ . }}
+  {{- end }}
+routes:
+  - match: Host(`{{ join "`) || Host(`" .Values.ingress.hosts }}`)
+    kind: Rule
+    services:
+      - name: {{ include "expo-app.fullname" . }}
+        port: {{ .Values.service.port }}
+  {{- if .Values.ingress.tls.enabled }}
+tls:
+  secretName: {{ .Values.ingress.tls.secretName }}
+  {{- end }}
+  {{- end }}
