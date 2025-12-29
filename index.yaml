@@ -2,10 +2,20 @@ apiVersion: v1
 entries:
   expo-app:
   - apiVersion: v2
-    appVersion: 1.0.1
-    created: "2025-12-28T00:18:31.111008+03:00"
+    appVersion: 1.0.2
+    created: "2025-12-29T22:26:15.196914+03:00"
     description: Generic Expo React Native Web Application
-    digest: 7fb0de5b3323841d682cdd21e4631c793cdf735d7d73e8124ef4dffdedc10fb0
+    digest: 1497823e088dfbcca822ec626aafb4b92ddd610bf972b7c782a059114fbf7359
+    name: expo-app
+    type: application
+    urls:
+    - expo-app-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v2
+    appVersion: 1.0.2
+    created: "2025-12-29T22:26:15.196242+03:00"
+    description: Generic Expo React Native Web Application
+    digest: 4af25a897da01c412f1ad2ef61c4753a8750ac832eb0bff2a3d6184071bdc3e8
     name: expo-app
     type: application
     urls:
@@ -13,7 +23,7 @@ entries:
     version: 0.1.1
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2025-12-28T00:18:31.110125+03:00"
+    created: "2025-12-29T22:26:15.195649+03:00"
     description: Generic Expo React Native Web Application
     digest: 7f37806830b0512e6b38652ccc3740ce7ebaf251935b4679f2859ab79e4acaf3
     name: expo-app
@@ -24,7 +34,7 @@ entries:
   spring-boot-app:
   - apiVersion: v2
     appVersion: 1.0.1
-    created: "2025-12-28T00:18:31.111823+03:00"
+    created: "2025-12-29T22:26:15.197605+03:00"
     description: Generic Spring Boot application chart
     digest: 9a28221750ef880151e9b5d4fa66b7bd8cdd633541a2a915ee9a9a1189c10775
     name: spring-boot-app
@@ -34,7 +44,7 @@ entries:
     version: 0.1.1
   - apiVersion: v2
     appVersion: 1.0.1
-    created: "2025-12-28T00:18:31.11132+03:00"
+    created: "2025-12-29T22:26:15.197253+03:00"
     description: Generic Spring Boot application chart
     digest: 89dc6f55991b9cf9dee92978483003f4181ab7b195b6c349dfa3aed7b50daef2
     name: spring-boot-app
@@ -42,4 +52,4 @@ entries:
     urls:
     - spring-boot-app-0.1.0.tgz
     version: 0.1.0
-generated: "2025-12-28T00:18:31.109518+03:00"
+generated: "2025-12-29T22:26:15.195078+03:00"
