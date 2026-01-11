@@ -12,8 +12,6 @@ service:
 
 ingress:
   enabled: false
-  host: ""
-  entrypoint: websecure
 
 env: {}
 secrets: {}
